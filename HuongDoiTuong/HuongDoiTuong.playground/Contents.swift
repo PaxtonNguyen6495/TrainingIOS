@@ -1,4 +1,3 @@
-import UIKit
 
-var greeting = "Hi, playground"
+let greeting = "Hi, playground"
 print("lili")
