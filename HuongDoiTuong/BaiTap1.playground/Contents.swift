@@ -55,6 +55,7 @@ let nguoi3 = Nguoi(ten: "Hung", tuoi: 20, ngheNghiep: "Free", soCMND: 03)
 let hoGD1 = HoGiaDinh(soNha: "215 PNX", cacThanhVien: [nguoi1, nguoi2])
 let hoGD2 = HoGiaDinh(soNha: "306 TCV", cacThanhVien: [nguoi3])
 let khuPho = KhuPho(tenKhuPho: "A", cacHo: [hoGD1, hoGD2])
+
 print("day la khu pho \(khuPho.tenKhuPho)")
 for ho in khuPho.cacHo {
     print(ho.soNha)
