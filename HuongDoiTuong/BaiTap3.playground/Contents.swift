@@ -14,11 +14,11 @@ class CanBo {
     var tuoi: Int
     var gioiTinh: String
     var diaChi: String
-
+    
     func lamViec() {
         print("")
     }
-
+    
     init(hoTen: String,tuoi: Int, gioiTinh: String, diaChi: String) {
         self.hoTen = hoTen
         self.tuoi = tuoi
@@ -32,7 +32,7 @@ class CongNhan: CanBo {
     override func lamViec() {
         print("Tôi là công nhân")
     }
-
+    
     init(canBo: CanBo, capBac: Int) {
         self.capBac = capBac
         super.init(hoTen: canBo.hoTen, tuoi: canBo.tuoi, gioiTinh: canBo.gioiTinh, diaChi: canBo.diaChi)
@@ -44,10 +44,10 @@ class KySu: CanBo {
     override func lamViec() {
         print("Tôi là công nhân")
     }
-
+    
     init(canBo: CanBo, nganhDaoTao: String) {
         self.nganhDaoTao = nganhDaoTao
-        super.init(hoTen: hoTen, tuoi: tuoi, gioiTinh: gioiTinh, diaChi: diaChi)
+        super.init(hoTen: canBo.hoTen, tuoi: canBo.tuoi, gioiTinh: canBo.gioiTinh, diaChi: canBo.diaChi)
     }
 }
 
@@ -56,10 +56,10 @@ class TruongPhong: CanBo {
     override func lamViec() {
         print("Tôi là trưởng phòng")
     }
-
+    
     init(canBo: CanBo, tenPhongBan: String) {
         self.tenPhongBan = tenPhongBan
-        super.init(hoTen: hoTen, tuoi: tuoi, gioiTinh: gioiTinh, diaChi: diaChi)
+        super.init(hoTen: canBo.hoTen, tuoi: canBo.tuoi, gioiTinh: canBo.gioiTinh, diaChi: canBo.diaChi)
     }
 }
 
@@ -72,12 +72,12 @@ class QuanLyCanBo {
             return
         }
         if let nganhDaoTao {
-            let kySu = KySu(hoTen: canBo.hoTen, tuoi: canBo.tuoi, gioiTinh: canBo.gioiTinh, diaChi: canBo.diaChi, nganhDaoTao: nganhDaoTao)
+            let kySu = KySu(canBo: canBo, nganhDaoTao: nganhDaoTao)
             tatCaCanBo.append(kySu)
             return
         }
         if let tenPhongBan {
-            let truongPhong = TruongPhong(hoTen: canBo.hoTen, tuoi: canBo.tuoi, gioiTinh: canBo.gioiTinh, diaChi: canBo.diaChi, tenPhongBan: tenPhongBan)
+            let truongPhong = TruongPhong(canBo: canBo, tenPhongBan: tenPhongBan)
             tatCaCanBo.append(truongPhong)
         }
     }
