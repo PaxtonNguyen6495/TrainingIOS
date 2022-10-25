@@ -45,7 +45,7 @@ class KySu: CanBo {
         print("Tôi là công nhân")
     }
 
-    init(hoTen: String, tuoi: Int, gioiTinh: String, diaChi: String, nganhDaoTao: String) {
+    init(canBo: CanBo, nganhDaoTao: String) {
         self.nganhDaoTao = nganhDaoTao
         super.init(hoTen: hoTen, tuoi: tuoi, gioiTinh: gioiTinh, diaChi: diaChi)
     }
@@ -57,7 +57,7 @@ class TruongPhong: CanBo {
         print("Tôi là trưởng phòng")
     }
 
-    init(hoTen: String, tuoi: Int, gioiTinh: String, diaChi: String, tenPhongBan: String) {
+    init(canBo: CanBo, tenPhongBan: String) {
         self.tenPhongBan = tenPhongBan
         super.init(hoTen: hoTen, tuoi: tuoi, gioiTinh: gioiTinh, diaChi: diaChi)
     }
@@ -79,7 +79,6 @@ class QuanLyCanBo {
         if let tenPhongBan {
             let truongPhong = TruongPhong(hoTen: canBo.hoTen, tuoi: canBo.tuoi, gioiTinh: canBo.gioiTinh, diaChi: canBo.diaChi, tenPhongBan: tenPhongBan)
             tatCaCanBo.append(truongPhong)
-            return
         }
     }
 }
