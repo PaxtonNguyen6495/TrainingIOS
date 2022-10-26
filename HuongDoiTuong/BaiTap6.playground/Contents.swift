@@ -18,7 +18,6 @@ class SinhVien {
 }
 
 class TheMuon: SinhVien {
-    var sinhvien: SinhVien
     var ngayMuon: Int
     var hanTra: Int
     var soHieuSach: Int
@@ -29,29 +28,39 @@ class TheMuon: SinhVien {
         self.hanTra = hanTra
         self.soHieuSach = soHieuSach
         self.maPhieuMuon = maPhieuMuon
-        self.sinhvien = sinhvien
         super.init(hoTen: sinhvien.hoTen, tuoi: sinhvien.tuoi, lop: sinhvien.lop)
     }
 }
 
-var tatCaSinhVien: [TheMuon] = []
+var tatCaTheMuon: [TheMuon] = []
 class QuanLy {
-    class func themMuonSach(muonSach: TheMuon) {
-        let sinhVien = TheMuon(sinhvien: SinhVien(hoTen: muonSach.sinhvien.hoTen, tuoi:muonSach.sinhvien.tuoi, lop: muonSach.sinhvien.lop), ngayMuon: muonSach.ngayMuon, hanTra: muonSach.hanTra, soHieuSach: muonSach.soHieuSach, maPhieuMuon: muonSach.maPhieuMuon)
-        tatCaSinhVien.append(sinhVien)
+    class func themLuotMuonSach(theMuon: TheMuon) {
+        let theMuon1 = TheMuon(sinhvien: SinhVien(hoTen: theMuon.hoTen, tuoi: theMuon.tuoi, lop: theMuon.lop), ngayMuon: theMuon.ngayMuon, hanTra: theMuon.hanTra, soHieuSach: theMuon.soHieuSach, maPhieuMuon: theMuon.maPhieuMuon)
+        tatCaTheMuon.append(theMuon1)
     }
-
-    class func xoaSinhVien(maPhieuMuon: Int) {
-        for (i,value) in tatCaSinhVien.enumerated() {
+    
+    class func xoaLuotMuonSach(maPhieuMuon: Int) {
+        for (i,value) in tatCaTheMuon.enumerated() {
             if value.maPhieuMuon == maPhieuMuon {
-                tatCaSinhVien.remove(at:i)
+                tatCaTheMuon.remove(at:i)
+            }
+        }
+    }
+    class func hienThiThongTinTheMuon(maPhieuMuon: Int) {
+        for theMuon in tatCaTheMuon {
+            if theMuon.maPhieuMuon == maPhieuMuon {
+                print(theMuon.hoTen)
+                print(theMuon.lop)
+                print(theMuon.ngayMuon)
             }
         }
     }
 }
 
-QuanLy.themMuonSach(muonSach: TheMuon(sinhvien: SinhVien(hoTen: "Lan", tuoi: 9, lop: "3A"), ngayMuon: 1102022, hanTra: 2102022, soHieuSach: 1, maPhieuMuon: 1))
-QuanLy.themMuonSach(muonSach: TheMuon(sinhvien: SinhVien(hoTen: "Hung", tuoi: 12, lop: "6"), ngayMuon: 3102022, hanTra: 4102022, soHieuSach: 2, maPhieuMuon: 3))
-QuanLy.xoaSinhVien(maPhieuMuon: 3)
-print(dump(tatCaSinhVien))
+QuanLy.themLuotMuonSach(theMuon: TheMuon(sinhvien: SinhVien(hoTen: "Tien", tuoi: 7, lop: "1A"), ngayMuon: 1, hanTra: 3, soHieuSach: 100, maPhieuMuon: 12))
+QuanLy.themLuotMuonSach(theMuon: TheMuon(sinhvien: SinhVien(hoTen: "Dang", tuoi: 8, lop: "2A"), ngayMuon: 3, hanTra: 2, soHieuSach: 25, maPhieuMuon: 13))
+QuanLy.themLuotMuonSach(theMuon: TheMuon(sinhvien: SinhVien(hoTen: "Nin", tuoi: 9, lop: "3B"), ngayMuon: 2, hanTra: 2, soHieuSach: 30, maPhieuMuon: 14))
+QuanLy.xoaLuotMuonSach(maPhieuMuon: 12)
+print(dump(tatCaTheMuon))
+QuanLy.hienThiThongTinTheMuon(maPhieuMuon: 14)
 
