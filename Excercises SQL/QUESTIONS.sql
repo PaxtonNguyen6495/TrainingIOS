@@ -1,0 +1,28 @@
+-- A. Để quản lý Thực tập nghề nghiệp của sinh viên, người ta xây dựng một cơ sở dữ liệu có tên là ThucTap gồm các sơ đồ quan hệ sau:
+
+-- Khoa(makhoa char(10), tenkhoa char(30), dienthoai char(10))
+-- GiangVien(magv int, hotengv char(30), luong decimal(5,2), makhoa char(10))
+-- SinhVien(masv int, hotensv char(30), makhoa char(10), namsinh int, quequan char(30))
+-- DeTai(madt char(10), tendt char(30), kinhphi int, NoiThucTap char(30))
+-- HuongDan(masv int, madt char(10), magv int, ketqua decimal(5,2))
+-- B. Chỉ sử dụng 01 lệnh SQL trả lời các yêu cầu sau:
+- I
+-- Đưa ra thông tin gồm mã số, họ tênvà tên khoa của tất cả các giảng viên
+-- Đưa ra thông tin gồm mã số, họ tênvà tên khoa của các giảng viên của khoa ‘DIA LY va QLTN’
+-- Cho biết số sinh viên của khoa ‘CONG NGHE SINH HOC’
+-- Đưa ra danh sách gồm mã số, họ tênvà tuổi của các sinh viên khoa ‘TOAN’
+-- Cho biết số giảng viên của khoa ‘CONG NGHE SINH HOC’
+-- Cho biết thông tin về sinh viên không tham gia thực tập
+-- Đưa ra mã khoa, tên khoa và số giảng viên của mỗi khoa
+-- Cho biết số điện thoại của khoa mà sinh viên có tên ‘Le van son’ đang theo học
+II
+-- Cho biết mã số và tên của các đề tài do giảng viên ‘Tran son’ hướng dẫn
+-- Cho biết tên đề tài không có sinh viên nào thực tập
+-- Cho biết mã số, họ tên, tên khoa của các giảng viên hướng dẫn từ 3 sinh viên trở lên.
+-- Cho biết mã số, tên đề tài của đề tài có kinh phí cao nhất
+-- Cho biết mã số và tên các đề tài có nhiều hơn 2 sinh viên tham gia thực tập
+-- Đưa ra mã số, họ tên và điểm của các sinh viên khoa ‘DIALY và QLTN’
+-- Đưa ra tên khoa, số lượng sinh viên của mỗi khoa
+-- Cho biết thông tin về các sinh viên thực tập tại quê nhà
+-- Hãy cho biết thông tin về những sinh viên chưa có điểm thực tập
+-- Đưa ra danh sách gồm mã số, họ tên các sinh viên có điểm thực tập bằng 0
