@@ -1,0 +1,146 @@
+Last login: Fri Nov  4 18:10:02 on ttys000
+TranHoangDieuThao@hiennguyens-MacBook ~ % pwd
+/Users/TranHoangDieuThao
+TranHoangDieuThao@hiennguyens-MacBook ~ % ls
+Applications	Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures	hi.swift
+TranHoangDieuThao@hiennguyens-MacBook ~ % cd Desktop 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % pwd
+/Users/TranHoangDieuThao/Desktop
+TranHoangDieuThao@hiennguyens-MacBook Desktop % ls
+BeginnersFullCourse.sql
+Closures_Delegate_DataSource.playground
+Playground
+Screen Shot 2022-10-31 at 11.58.51 AM.png
+screen photo
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % mkdir linux 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % ls
+BeginnersFullCourse.sql
+Closures_Delegate_DataSource.playground
+Playground
+Screen Shot 2022-10-31 at 11.58.51 AM.png
+linux
+screen photo
+TranHoangDieuThao@hiennguyens-MacBook Desktop % mkdir sql
+TranHoangDieuThao@hiennguyens-MacBook Desktop % ls
+BeginnersFullCourse.sql
+Closures_Delegate_DataSource.playground
+Playground
+Screen Shot 2022-10-31 at 11.58.51 AM.png
+linux
+screen photo
+sql
+TranHoangDieuThao@hiennguyens-MacBook Desktop % cd linux 
+TranHoangDieuThao@hiennguyens-MacBook linux % 
+TranHoangDieuThao@hiennguyens-MacBook linux % cd ..
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % cd ..
+TranHoangDieuThao@hiennguyens-MacBook ~ % cd Desktop
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % touch test1.doc
+TranHoangDieuThao@hiennguyens-MacBook Desktop % ls
+BeginnersFullCourse.sql
+Closures_Delegate_DataSource.playground
+Playground
+Screen Shot 2022-10-31 at 11.58.51 AM.png
+linux
+screen photo
+sql
+test1.doc
+TranHoangDieuThao@hiennguyens-MacBook Desktop % cd linux 
+TranHoangDieuThao@hiennguyens-MacBook linux % touch file.doc
+TranHoangDieuThao@hiennguyens-MacBook linux % cd ..
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % touch linux/file1.doc
+TranHoangDieuThao@hiennguyens-MacBook Desktop % touch sql/file2.doc
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % vi linux/file1.doc
+TranHoangDieuThao@hiennguyens-MacBook Desktop % vi sql/file2.doc
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % cat linux/file1.doc
+I
+love
+linux
+so
+much
+TranHoangDieuThao@hiennguyens-MacBook Desktop % cat sql/file2.doc
+sql
+is 
+so 
+nice
+ahihi
+TranHoangDieuThao@hiennguyens-MacBook Desktop % head - 3 linux/file1.doc
+head: -: No such file or directory
+head: 3: No such file or directory
+==> linux/file1.doc <==
+I
+love
+linux
+so
+much
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % head - 1 linux/file1.doc
+head: -: No such file or directory
+head: 1: No such file or directory
+==> linux/file1.doc <==
+I
+love
+linux
+so
+much
+TranHoangDieuThao@hiennguyens-MacBook Desktop % head -3 linux/file1.doc
+I
+love
+linux
+TranHoangDieuThao@hiennguyens-MacBook Desktop % head -3 sql/file2.doc
+sql
+is 
+so 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % tail -2 linux.file1.doc
+tail: linux.file1.doc: No such file or directory
+TranHoangDieuThao@hiennguyens-MacBook Desktop % tail -2 linux/file1.doc
+so
+much
+TranHoangDieuThao@hiennguyens-MacBook Desktop % tail -2 sql/file2.doc
+nice
+ahihi
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % ls
+BeginnersFullCourse.sql
+Closures_Delegate_DataSource.playground
+Playground
+Screen Shot 2022-10-31 at 11.58.51 AM.png
+linux
+screen photo
+sql
+test1.doc
+TranHoangDieuThao@hiennguyens-MacBook Desktop % ls -l
+total 3592
+-rw-r--r--@ 1 TranHoangDieuThao  staff       65 Oct 31 21:53 BeginnersFullCourse.sql
+drwxr-xr-x@ 5 TranHoangDieuThao  staff      160 Oct 20 19:41 Closures_Delegate_DataSource.playground
+drwxr-xr-x  7 TranHoangDieuThao  staff      224 Oct 29 18:17 Playground
+-rw-r--r--@ 1 TranHoangDieuThao  staff  1834448 Oct 31 11:58 Screen Shot 2022-10-31 at 11.58.51 AM.png
+drwxr-xr-x  4 TranHoangDieuThao  staff      128 Nov  4 19:48 linux
+drwxr-xr-x  5 TranHoangDieuThao  staff      160 Oct 28 06:56 screen photo
+drwxr-xr-x  3 TranHoangDieuThao  staff       96 Nov  4 19:49 sql
+-rw-r--r--  1 TranHoangDieuThao  staff        0 Nov  4 19:42 test1.doc
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % cp linux/file1.doc sql 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % cp test1.doc sql          
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % mv test1.doc sql
+TranHoangDieuThao@hiennguyens-MacBook Desktop % mv sql/mysql
+usage: mv [-f | -i | -n] [-hv] source target
+       mv [-f | -i | -n] [-v] source ... directory
+TranHoangDieuThao@hiennguyens-MacBook Desktop % mv sql/ mysql
+TranHoangDieuThao@hiennguyens-MacBook Desktop % mv mysql/file1.doc mysql/question.doc
+TranHoangDieuThao@hiennguyens-MacBook Desktop % ls mysql/
+file2.doc	question.doc	test1.doc
+TranHoangDieuThao@hiennguyens-MacBook Desktop % rm mysql/question.doc
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
+TranHoangDieuThao@hiennguyens-MacBook Desktop % ls mysql 
+file2.doc	test1.doc
+TranHoangDieuThao@hiennguyens-MacBook Desktop % 
